@@ -1,0 +1,32 @@
+.App {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #c5f5f0, #b2ebf2);
+  padding: 40px 20px;
+  animation: fadeIn 1s ease;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #26867c;
+  font-size: 3rem;
+  font-weight: 700;
+  animation: fadeInDown 1s ease;
+}
+
+/* Animations */
+
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

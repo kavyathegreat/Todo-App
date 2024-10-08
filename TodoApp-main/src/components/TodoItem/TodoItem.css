@@ -1,0 +1,120 @@
+.todo-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1.5s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.todo-list-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list-item .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-list-item h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #26867c;
+  animation: fadeIn 1.5s ease;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.todo-list-item p {
+  padding: 1px;
+  font-size: 18px;
+  color: #33b3a6;
+  animation: fadeIn 1.5s ease;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.todo-list-item .icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.todo-list-item .trash,
+.todo-list-item .check,
+.todo-list-item .edit,
+.todo-list-item .expand {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.7s ease, transform 0.2s ease;
+  color: #33b3a6;
+}
+
+.todo-list-item .trash:hover {
+  color: #dc3545;
+  transform: scale(1.1);
+}
+
+.todo-list-item .check:hover {
+  color: #28a745;
+  transform: scale(1.1);
+}
+
+.todo-list-item .edit:hover {
+  color: #198754;
+  transform: scale(1.1);
+}
+
+.todo-list-item .expand:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+.edit__wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
